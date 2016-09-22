@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="images/public.css">
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: black;
+            color: #fff;
+        }
+
+        .box{
+            width: 100%;
+            height: 40px;
+            background: rgba(89,148,18,.8);
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
+        }
+        .box div{
+            float: left;
+            width: 16%;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+        }
+        body .img{
+            width: 100%;
+            height: 100%;
+        }
+        .a{
+            position: absolute;
+            left: 300px;
+            top: 0px;
+            z-index: 2;
+            width: 100px;
+            height: 100px;
+        }
+        span{
+            font-size: 30px;
+            color: #f31b10;
+        }
+        .box1{
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 3;
+            text-align: center;
+            line-height: 540px;
+            display: none;
+        }
+        .box1 img{
+            vertical-align: middle;
+        }
+        .box2{
+            width: 160px;
+            height: 28px;
+            position: absolute;
+            left: 600px;
+            top: 340px;
+            cursor: pointer;
+        }
+        .box3{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 3;
+            background: rgba(255,255,255,.9);
+            display: none;
+        }
+        .box4{
+            position: absolute;
+            left: 400px;
+            top: 80px;
+        }
+        .box5{
+            position: absolute;
+            left: 490px;
+            top: 260px;
+        }
+        .box6{
+            width: 150px;
+            height: 40px;
+            font-size: 20px;
+            color: black;
+            position: absolute;
+            left: 600px;
+            bottom: 60px;
+            background: red;
+            line-height: 40px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .box7{
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,.8);
+            position: absolute;
+            left: 0px;
+            top: 0;
+            z-index: 3;
+
+        }
+        .box7 img{
+            position: absolute;
+            left: 340px;
+            top: 100px;
+        }
+        .box8{
+            width: 245px;
+            height: 40px;
+            cursor: pointer;
+            position: absolute;
+            left: 560px;
+            top: 360px;
+        }
+        .dsb{
+           width: 100px;
+           height: 40px;
+           border: 1px solid green;
+           position: absolute;left: 3px;
+           top: 10px;
+           z-index: 2;
+           line-height: 40px;
+           text-align: center; 
+           font-size: 20px;
+        }
+        .dsb1{
+           width: 100px;
+           height: 40px;
+           border: 1px solid green;
+           position: absolute;left: 3px;
+           top: 60px;
+           z-index: 2;
+           line-height: 40px;
+           text-align: center; 
+           font-size: 20px;
+        }
+        .dsb2{
+           width: 100px;
+           height: 40px;
+           border: 1px solid green;
+           position: absolute;left: 3px;
+           top: 110px;
+           z-index: 2;
+           line-height: 40px;
+           text-align: center; 
+           font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<img src="images/1.jpg" alt="" class="img">
+<div class="box">
+    <div>生命：</div>
+    <div class="life">3</div>
+    <div>分数：</div>
+    <div class="scroll">0</div>
+    <div>总分数：</div>
+    <div class="zong">0</div>
+</div>
+<div class="box1">
+    <img src="images/2.jpg" alt="">
+    <div class="box2"></div>
+</div>
+<div class="box3">
+    <img src="images/1_7.png" alt="" class="box4">
+    <img src="images/1.gif" alt="" class="box5">
+    <div class="box6">下一关</div>
+</div>
+<div class="box7">
+    <img src="images/3.png" alt="">
+    <div class="box8"></div>
+</div>
+<div class="dsb">暂停</div>
+<div class="dsb1">开始</div>
+<div class="dsb2">返回</div>
+</body>
+<script src="images/jianrong.js"></script>
+<script src="images/game.js"></script>
+<script>
+
+        var obj=new game()
+        var box8=$(".box8")[0]
+        var box7=$(".box7")[0]
+        box8.onclick=function(){
+            obj.play()
+            box7.style.display="none"
+        }
+        
+
+</script>
+</html>
